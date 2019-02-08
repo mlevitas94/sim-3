@@ -10,7 +10,9 @@ class Post extends Component {
     render(){
         return(
             <div>
-                Post page
+                {this.props.title}
+                <br/>
+                {this.props.username}
             </div>
         )
     }

@@ -16,9 +16,13 @@ app.use(
     saveUninitialized: false 
 })
 )
-
+//login stuff
 app.post('/api/register', cr.register)
 app.post('/api/login', cr.login)
+
+
+//post filters
+app.get('/api/post/:user/:search')
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db);
